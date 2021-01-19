@@ -3,9 +3,9 @@ package lecture.tree.binary_tree;
 public class BinaryTree {
 
     public static void main(String[] args) {
-        int count = 7;
+        int count = 7;  // 정점의 개수
 
-        Node[] nodeList = new Node[count + 1];
+        Node[] nodeList = new Node[count + 1];  // 크기 : 8, 이유는 index의 시작은 0부터이기 때문에 1부터 사용하기 위해 크기를 +1 함
 
         for (int i = 1; i <= count; i++) {
             Node binaryTree = new Node(i);
