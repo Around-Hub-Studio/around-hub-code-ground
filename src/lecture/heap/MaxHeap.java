@@ -14,9 +14,16 @@ public class MaxHeap {
             heap.add(1000000);
         }
 
+        public void print() {
+            for (int i = 1; i < heap.size(); i++) {
+                System.out.print(heap.get(i) + " ");
+            }
+            System.out.println();
+        }
+
         public void insert(int val) {
             heap.add(val);
-            int p = heap.size()-1;
+            int p = heap.size() - 1;
 
             while (p > 1 && heap.get(p / 2) < heap.get(p)) {
                 System.out.println("swap");
@@ -68,7 +75,7 @@ public class MaxHeap {
 
         Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
+        int N = sc.nextInt(); // 내가 작업하고 싶은 횟수
 
         MaximumHeap maximumHeap = new MaximumHeap();
 
@@ -77,6 +84,8 @@ public class MaxHeap {
 
             if (val == 0) {
                 System.out.println(maximumHeap.delete());
+            } else if (val == -1) {
+                maximumHeap.print();
             } else {
                 maximumHeap.insert(val);
             }
