@@ -11,7 +11,7 @@ public class MaxHeap {
 
         public MaximumHeap() {
             heap = new ArrayList<>();
-            heap.add(1000000);
+            heap.add(1000000); // heap.add(Integer.MAX_VALUE);
         }
 
         public void print() {
@@ -70,7 +70,7 @@ public class MaxHeap {
         }
 
     }
-
+// 15 9 5 7 4 3
     public static void main(String[] args) throws Exception {
 
         Scanner sc = new Scanner(System.in);
