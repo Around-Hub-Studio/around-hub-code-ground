@@ -1,5 +1,11 @@
 package lecture.basic_java;
 
+/**
+ * Hello World
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class HelloWorld {
 
     public static void main(String[] args) {

@@ -1,5 +1,11 @@
 package lecture.fibonacci_sequence;
 
+/**
+ * Fibonacci Code
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class Fibonacci {
 
     public Fibonacci() {

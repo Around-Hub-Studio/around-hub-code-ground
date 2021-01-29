@@ -3,6 +3,12 @@ package lecture.priority_queue;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+/**
+ * Priority Queue Code
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class PriorityQueue1 {
 
     static class Person implements Comparable<Person> {

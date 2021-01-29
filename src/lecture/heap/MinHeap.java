@@ -3,6 +3,12 @@ package lecture.heap;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Minimum Heap Code
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class MinHeap {
 
     public static class MinimumHeap {

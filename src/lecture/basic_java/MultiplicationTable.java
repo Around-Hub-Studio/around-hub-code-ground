@@ -1,5 +1,11 @@
 package lecture.basic_java;
 
+/**
+ * Multiple Table Code
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class MultiplicationTable {
 
     public static void main(String[] args) {

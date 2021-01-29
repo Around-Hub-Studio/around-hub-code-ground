@@ -1,5 +1,11 @@
 package lecture.basic_java;
 
+/**
+ * Object Code 2
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class Object2 {
 
     public static void main(String[] args) {

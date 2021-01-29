@@ -3,6 +3,12 @@ package lecture.heap;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Maximum Heap Code
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class MaxHeap {
 
     public static class MaximumHeap {

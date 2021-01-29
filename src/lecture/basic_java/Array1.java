@@ -1,5 +1,11 @@
 package lecture.basic_java;
 
+/**
+ * Array Code
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class Array1 {
 
     public static void main(String[] args) {

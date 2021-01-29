@@ -1,5 +1,11 @@
 package lecture.tree.binary_tree;
 
+/**
+ * Binary Tree Code
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class BinaryTree {
 
     public static void main(String[] args) {

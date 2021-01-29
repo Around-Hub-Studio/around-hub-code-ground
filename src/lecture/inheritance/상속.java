@@ -1,5 +1,11 @@
 package lecture.inheritance;
 
+/**
+ * Inheritance Code
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class 상속 {
     public static void main(String[] args) {
         System.out.println("----------inheritance.A----------");
