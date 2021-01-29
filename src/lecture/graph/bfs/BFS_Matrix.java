@@ -10,7 +10,7 @@ import java.util.Scanner;
  * YouTube : Around Hub Studio
  * @author Flature
  */
-public class Bfs_Lecture {
+public class BFS_Matrix {
 
     static int vertex;
     static int edge;

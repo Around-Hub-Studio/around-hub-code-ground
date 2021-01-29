@@ -8,7 +8,7 @@ import java.util.Scanner;
  * YouTube : Around Hub Studio
  * @author Flature
  */
-public class Dfs_Lecture {
+public class DFS_Matrix {
 
     static int edge;
     static int vertex;
