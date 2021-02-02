@@ -24,7 +24,7 @@ public class PriorityQueue1 {
             return name;
         }
 
-        public int getTime() {
+        public int getAge() {
             return age;
         }
 
@@ -51,12 +51,9 @@ public class PriorityQueue1 {
         priorityQueue.add(new Person("홍길동", 27));
 
         // 우선순위 큐의 값 제거
-        System.out.println(priorityQueue.poll().name);
-        System.out.println(priorityQueue.poll().name);
-
-        // 우선순위 큐의 최우선순위 값 조회
-        System.out.println(priorityQueue.peek().name);
-
+        System.out.println("이름 : " + priorityQueue.peek().getName() + ", 나이 : " + priorityQueue.poll().getAge());
+        System.out.println("이름 : " + priorityQueue.peek().getName() + ", 나이 : " + priorityQueue.poll().getAge());
+        System.out.println("이름 : " + priorityQueue.peek().getName() + ", 나이 : " + priorityQueue.poll().getAge());
     }
 
 }
