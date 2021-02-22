@@ -1,4 +1,4 @@
-package lecture.inheritance;
+package lecture.middle_java.inheritance;
 
 public class Parent {
 

@@ -4,7 +4,8 @@ package lecture.euclid_gcd;
  * Euclid GCD(Greatest common divisor)
  * thinkGround.studio
  * YouTube : Around Hub Studio
- * @author  Flature
+ *
+ * @author Flature
  */
 public class EuclidGCD {
 
@@ -26,7 +27,7 @@ public class EuclidGCD {
         // 다른 방법
         int temp;
 
-        while(b!=0){
+        while (b != 0) {
             temp = b;
             b = a % b;
             a = temp;
