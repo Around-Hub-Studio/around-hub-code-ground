@@ -11,6 +11,8 @@ public class FlowLayoutExample extends JFrame {
     JButton button4 = new JButton();
     JButton button5 = new JButton();
 
+    //JButton[] buttonList = new JButton[5];
+
     public FlowLayoutExample() {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 

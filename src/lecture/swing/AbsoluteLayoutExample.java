@@ -24,7 +24,9 @@ public class AbsoluteLayoutExample extends JFrame {
 
     private void setComponents(){
         button1.setText("버튼1");
-        button1.setBounds(10,10,100,50);
+        //button1.setBounds(10,10,100,50);
+        button1.setSize(100,50);
+        button1.setLocation(10,10);
         this.add(button1);
 
         button2.setText("버튼2");
