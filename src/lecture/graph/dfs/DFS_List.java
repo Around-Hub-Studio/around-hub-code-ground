@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+/**
+ * List로 구현한 DFS
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class DFS_List {
 
     ArrayList<Integer>[] arrayList;

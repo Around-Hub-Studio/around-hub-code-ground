@@ -2,6 +2,12 @@ package lecture.graph.bfs;
 
 import java.util.*;
 
+/**
+ * List로 구현한 BFS
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class BFS_List {
 
     static ArrayList<Integer>[] arrayList;

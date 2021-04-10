@@ -2,6 +2,12 @@ package lecture.basic_java.exception;
 
 import java.util.Scanner;
 
+/**
+ * 예외처리 예시
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class TryCatch {
 
     public TryCatch() {

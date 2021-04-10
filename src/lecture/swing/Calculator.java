@@ -48,7 +48,7 @@ public class Calculator extends JFrame {
 
         setComponents();
         setPanels();
-        setEvents();
+        setEvents(); // 이벤트 처리!
 
         setLayout(new GridLayout(2, 1));
 
@@ -57,7 +57,6 @@ public class Calculator extends JFrame {
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
-
     }
 
     private void setPanels() {

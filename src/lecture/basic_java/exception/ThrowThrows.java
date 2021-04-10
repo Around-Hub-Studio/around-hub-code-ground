@@ -1,5 +1,11 @@
 package lecture.basic_java.exception;
 
+/**
+ * Throw 예시
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class ThrowThrows {
 
     public ThrowThrows() {

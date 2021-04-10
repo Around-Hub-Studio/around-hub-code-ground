@@ -1,5 +1,11 @@
 package lecture.middle_java.instance;
 
+/**
+ * 인스턴스(Instance) 예시코드
+ * thinkground.studio
+ * YouTube : Around Hub Studio
+ * @author Flature
+ */
 public class Contents {
 
     private String name;

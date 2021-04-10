@@ -5,7 +5,7 @@ import javax.swing.*;
 public class SwingComponents extends JFrame {
 
     public SwingComponents(){
-        setSize(300,500);
+        setSize(300,500); // this.setSize();
 
         JLabel jLabel = new JLabel();
         jLabel.setText("abc");
@@ -19,10 +19,12 @@ public class SwingComponents extends JFrame {
 
         JTextArea jTextArea = new JTextArea();
         jTextArea.setText("ghi");
+        jTextArea.append(" + abc");
         jTextArea.setBounds(10,70, 200, 20);
         add(jTextArea);
 
         JTextField jTextField = new JTextField();
+        //JPasswordField jPasswordField = new JPasswordField();
         jTextField.setText("jkl");
         jTextField.setBounds(10,100, 200, 20);
         add(jTextField);
