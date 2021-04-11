@@ -20,5 +20,4 @@ public class Contents {
         this.age = age;
     }
 
-
 }
