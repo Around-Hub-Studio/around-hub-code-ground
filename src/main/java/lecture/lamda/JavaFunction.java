@@ -12,7 +12,7 @@ public class JavaFunction {
 
         System.out.println(intSum.apply(5));
 
-
+        // 동일한 타입의 두 값을 받아 연산을 처리
         BinaryOperator binarySum = (a, b) -> a + " " + b;
 
         System.out.println(binarySum.apply(1, 2));

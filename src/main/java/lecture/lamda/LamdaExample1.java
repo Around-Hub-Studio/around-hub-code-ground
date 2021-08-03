@@ -1,5 +1,6 @@
 package lecture.lamda;
 
+// FunctionalInterface : 구현해야할 추상 메소드가 한개인 인터페이스
 @FunctionalInterface
 interface Print {
     void print(int a, int b);
@@ -25,12 +26,10 @@ public class LamdaExample1 {
             }
         });
 
-
         Test lamdaTest = new Test();
         lamdaTest.testMethod((a, b) -> {
             System.out.println("a와 b의 합은 " + (a + b));
             System.out.println("a와 b의 차은 " + (a - b));
         });
     }
-
 }
