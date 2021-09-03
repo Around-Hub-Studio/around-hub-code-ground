@@ -13,7 +13,7 @@ public class Main2884 {
 
         if (min >= 45) {
             System.out.println(hour + " " + (min - 45));
-        }else if(min < 45){
+        }else{
             if(hour == 0){
                 System.out.println(23 + " " + (60+(min-45)));
             }else{
