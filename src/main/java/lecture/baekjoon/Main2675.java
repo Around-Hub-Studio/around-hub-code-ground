@@ -16,8 +16,8 @@ public class Main2675 {
 
             String input = sc.next();
 
-            for(int i = 0 ;i < input.length();i++){
-                for(int j = 0 ; j < R ; j++){
+            for (int i = 0; i < input.length(); i++) {
+                for (int j = 0; j < R; j++) {
                     System.out.print(input.charAt(i));
                 }
             }

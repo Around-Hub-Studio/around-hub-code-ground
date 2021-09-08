@@ -6,16 +6,16 @@ public class Main8393 {
 
     public static void main(String[] args){
 
-
         Scanner sc = new Scanner(System.in);
 
-        int a = sc.nextInt();
-        int b = 0;
-        for(int i = 1 ; i<a+1;i++){
-            b += i;
+        int input = sc.nextInt();
+        int sum = 0;
+        for(int i = 1 ; i<input+1;i++){
+            sum += i;
+            //System.out.println(sum);
         }
 
-        System.out.println(b);
+        System.out.println(sum);
     }
 
 }
