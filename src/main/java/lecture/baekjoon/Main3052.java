@@ -11,18 +11,19 @@ public class Main3052 {
         int[] list = new int[10];
         int[] check = new int[42];
 
-        int result = 0;
+        int count = 0;
+
         for(int i = 0 ; i< list.length ; i++){
             list[i] = sc.nextInt();
 
             int num = list[i] % 42;
             if(check[num] != 1){
                 check[num] = 1;
-                result++;
+                count++;
             }
         }
 
-        System.out.println(result);
+        System.out.println(count);
 
 
 

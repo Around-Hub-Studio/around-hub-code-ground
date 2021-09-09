@@ -10,6 +10,7 @@ public class Main2562 {
 
         int result = 0;
         int position = 0;
+
         for(int i = 0 ; i < 9;i++){
             int num = sc.nextInt();
             if(result < num){
