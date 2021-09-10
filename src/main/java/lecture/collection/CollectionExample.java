@@ -6,15 +6,17 @@ public class CollectionExample {
 
     public static void main(String[] args){
 
-        Stack stack;
-
-        Deque deque;
-
         ArrayList arrayList;
 
         LinkedList linkedList;
 
         Vector vector;
+
+        Stack stack;
+
+        //--------------------
+
+        Deque deque;
 
         PriorityQueue priorityQueue;
 

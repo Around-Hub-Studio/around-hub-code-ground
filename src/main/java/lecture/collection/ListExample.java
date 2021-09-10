@@ -22,11 +22,11 @@ public class ListExample {
 
         System.out.println("--------------------------");
 
-/*
+        /*
         for(int i = 0 ; i < arrayList.size(); i++){
             System.out.println(arrayList.get(i));
         }
-*/
+        */
 
         arrayList.remove(3);
 
@@ -36,7 +36,7 @@ public class ListExample {
 
         System.out.println("--------------------------");
 
-        Collections.sort(arrayList);
+        Collections.sort(arrayList); // 오름차순 정렬
 
         for (Integer integer : arrayList) {
             System.out.println(integer);
@@ -53,7 +53,11 @@ public class ListExample {
 
         System.out.println(arrayList.size());
 
+        System.out.println(arrayList.indexOf(500));
+
         System.out.println("-------------------------------↑↑↑ ArrayList ↑↑↑--------------------------");
+
+
         System.out.println("-------------------------------↓↓↓ LinkedList ↓↓↓--------------------------");
 
         LinkedList<String> linkedList = new LinkedList<>();
@@ -76,6 +80,14 @@ public class ListExample {
             System.out.println(s);
         }
 
+        System.out.println("--------------------------");
+
+        Collections.sort(linkedList);
+
+        for (String s : linkedList) {
+            System.out.println(s);
+        }
+
         System.out.println("-------------------------------↑↑↑ LinkedList ↑↑↑--------------------------");
         System.out.println("-------------------------------↓↓↓ Vector ↓↓↓--------------------------");
 
@@ -83,12 +95,27 @@ public class ListExample {
 
         System.out.println(vector.size());
         System.out.println(vector.capacity());
+
+        System.out.println("--------------------------");
+
         vector.add("가");
         vector.add("다");
+
         System.out.println(vector.add("나"));
         System.out.println(vector.add("마"));
         System.out.println(vector.add("라"));
+
+        System.out.println("--------------------------");
+
         System.out.println(vector.size());
+
+        for (String s : vector) {
+            System.out.println(s);
+        }
+
+        System.out.println("--------------------------");
+
+        Collections.sort(vector);
 
         for (String s : vector) {
             System.out.println(s);
