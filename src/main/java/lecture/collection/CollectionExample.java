@@ -16,9 +16,11 @@ public class CollectionExample {
 
         //--------------------
 
-        Deque deque;
+        Queue queue;
 
         PriorityQueue priorityQueue;
+
+        //--------------------
 
         SortedSet sortedSet;
 
@@ -27,6 +29,8 @@ public class CollectionExample {
         TreeMap treeMap;
 
         HashMap hashMap;
+
+        //--------------------
 
         SortedMap sortedMap;
 

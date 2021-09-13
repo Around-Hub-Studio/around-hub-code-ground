@@ -36,14 +36,16 @@ public class QueueExample {
 
         PriorityQueue<Person> priorityQueue = new PriorityQueue<>();
 
-        PriorityQueue<Person> reversePriorityQueue = new PriorityQueue<>(Collections.reverseOrder());
+        //PriorityQueue<Person> reversePriorityQueue = new PriorityQueue<>(Collections.reverseOrder());
 
         // 우선순위 큐의 값 추가
         priorityQueue.add(new Person("김민수", 25));
+        priorityQueue.add(new Person("황진이", 30));
         priorityQueue.add(new Person("이민아", 30));
         priorityQueue.add(new Person("홍길동", 27));
 
         // 우선순위 큐의 값 제거
+        System.out.println("이름 : " + priorityQueue.peek().getName() + ", 나이 : " + priorityQueue.poll().getAge());
         System.out.println("이름 : " + priorityQueue.peek().getName() + ", 나이 : " + priorityQueue.poll().getAge());
         System.out.println("이름 : " + priorityQueue.peek().getName() + ", 나이 : " + priorityQueue.poll().getAge());
         System.out.println("이름 : " + priorityQueue.peek().getName() + ", 나이 : " + priorityQueue.poll().getAge());
