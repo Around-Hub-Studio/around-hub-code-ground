@@ -14,10 +14,10 @@ public class Main1157 {
 
         for (int i = 0; i < s.length(); i++) {
 
-            if ('A' <= s.charAt(i) && s.charAt(i) <= 'Z') {
+            if ('A' <= s.charAt(i) && s.charAt(i) <= 'Z') { // 알파벳이 대문자인지 체크
                 array[s.charAt(i) - 'A']++;
 
-            } else {
+            } else { // 그 밖의 상황 (소문자)
                 array[s.charAt(i) - 'a']++;
 
             }
