@@ -15,13 +15,13 @@ public class Main5622 {
             char a = input.charAt(i);
 
             switch (a){
-                case 'A' : case 'B' : case 'C' :
+                case 'A' : case 'B' : case 'C' :  // 2에 대응되는 문자
                     sum += 3;
                     break;
-                case 'D' : case 'E' : case 'F' :
+                case 'D' : case 'E' : case 'F' :  // 3에 대응되는 문자
                     sum += 4;
                     break;
-                case 'G' : case 'H' : case 'I' :
+                case 'G' : case 'H' : case 'I' : // 4에 대응되는 문자
                     sum += 5;
                     break;
                 case 'J' : case 'K' : case 'L' :
