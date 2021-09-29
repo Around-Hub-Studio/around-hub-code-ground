@@ -11,10 +11,10 @@ public class Main2292 {
         int N = sc.nextInt();
 
         // 1 - 6 - 12 - 18
-
         int count = 1;
         int sum = 1;
         while (true) {
+            //System.out.println("count : " + count + ", sum : " + sum);
             if (N <= sum) {
                 break;
             }

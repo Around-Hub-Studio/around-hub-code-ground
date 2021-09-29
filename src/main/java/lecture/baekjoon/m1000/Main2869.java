@@ -12,13 +12,13 @@ public class Main2869 {
         int B = sc.nextInt();
         int V = sc.nextInt();
 
-        int count = (V - B) / (A - B);
+        int days = (V - B) / (A - B);
 
         if ((V - B) % (A - B) != 0) {
-            count++;
+            days++;
         }
 
-        System.out.println(count);
+        System.out.println(days);
 
     }
 
