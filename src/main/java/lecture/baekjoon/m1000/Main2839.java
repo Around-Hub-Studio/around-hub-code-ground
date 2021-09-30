@@ -10,11 +10,12 @@ public class Main2839 {
 
         int N = in.nextInt();
 
-        int count = 0;
+        int count = 0; // 3kg 자루의 개수를 새기 위한 카운트
         while (N % 5 != 0) {
             N -= 3;
             count++;
         }
+        //3, 6, 9, 12, 15
         if (N < 0) {
             System.out.println(-1);
             return;

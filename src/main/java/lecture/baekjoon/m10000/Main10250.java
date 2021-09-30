@@ -16,8 +16,8 @@ public class Main10250 {
             int W = sc.nextInt();
             int N = sc.nextInt();
 
-            int room = N / H;
-            int floor = N % H;
+            int room = N / H; // 호수
+            int floor = N % H; // 층수
 
             if (floor == 0) {
                 System.out.println((H * 100) + room);

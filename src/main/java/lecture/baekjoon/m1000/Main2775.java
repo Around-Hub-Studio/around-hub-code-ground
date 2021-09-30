@@ -13,8 +13,8 @@ public class Main2775 {
         int T = sc.nextInt();
         for (int test_case = 0; test_case < T; test_case++) {
 
-            int k = sc.nextInt();
-            int n = sc.nextInt();
+            int k = sc.nextInt(); // 층
+            int n = sc.nextInt(); // 호수
 
             if (k == 1 && n == 1) {
                 Answer = 1;
@@ -32,9 +32,7 @@ public class Main2775 {
                             sum += arr[i - 1][z];
                         }
                         arr[i][j] = sum;
-
                     }
-
                 }
 
                 Answer = arr[k][n];
