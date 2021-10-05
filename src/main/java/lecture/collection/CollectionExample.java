@@ -22,9 +22,15 @@ public class CollectionExample {
 
         //--------------------
 
+        HashSet hashSet;
+
+        TreeSet treeSet;
+
         SortedSet sortedSet;
 
-        HashSet hashSet;
+        LinkedHashSet linkedHashSet;
+
+        //--------------------
 
         TreeMap treeMap;
 

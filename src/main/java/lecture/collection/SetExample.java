@@ -1,6 +1,7 @@
 package lecture.collection;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -74,6 +75,15 @@ public class SetExample {
 
         for(String input : treeSet){
             System.out.println(input);
+        }
+
+        System.out.println(treeSet.size());
+
+        System.out.println("---------------------------");
+
+        Iterator<String> iterator = treeSet.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
         }
 
         System.out.println("-------------------------------↑↑↑ TreeSet ↑↑↑--------------------------");
