@@ -16,6 +16,7 @@ public class Main11653 {
                 N = N / i;
             }
         }
+
         if(N!=1){
             System.out.println(N);
         }
