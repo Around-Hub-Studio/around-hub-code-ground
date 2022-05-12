@@ -1,6 +1,7 @@
 package lecture.test_example;
 
 import org.junit.Test;
+import studio.aroundhub.codeground.lecture.test_example.Calculator;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
