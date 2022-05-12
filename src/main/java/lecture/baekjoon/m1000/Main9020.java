@@ -24,10 +24,10 @@ public class Main9020 {
         Scanner sc = new Scanner(System.in);
 
         // 최대 크기가 10000이기 때문에 아래와 같이 설정
-        arr = new boolean[100001];
+        arr = new boolean[10001];
 
         // 테스트 케이스를 진행하기 전에 에라토스테네스의 체 알고리즘을 수행하여 값 도출을 미리 진행
-        cal(100000);
+        cal(10000);
 
         int t = sc.nextInt();
 

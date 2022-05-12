@@ -6,7 +6,8 @@ public class ListExample {
 
     public static void main(String[] args) {
 
-        System.out.println("-------------------------------↓↓↓ ArrayList ↓↓↓--------------------------");
+        System.out.println(
+            "-------------------------------↓↓↓ ArrayList ↓↓↓--------------------------");
 
         ArrayList<Integer> arrayList = new ArrayList<>();
 
@@ -55,10 +56,11 @@ public class ListExample {
 
         System.out.println(arrayList.indexOf(500));
 
-        System.out.println("-------------------------------↑↑↑ ArrayList ↑↑↑--------------------------");
+        System.out.println(
+            "-------------------------------↑↑↑ ArrayList ↑↑↑--------------------------");
 
-
-        System.out.println("-------------------------------↓↓↓ LinkedList ↓↓↓--------------------------");
+        System.out.println(
+            "-------------------------------↓↓↓ LinkedList ↓↓↓--------------------------");
 
         LinkedList<String> linkedList = new LinkedList<>();
 
@@ -88,8 +90,10 @@ public class ListExample {
             System.out.println(s);
         }
 
-        System.out.println("-------------------------------↑↑↑ LinkedList ↑↑↑--------------------------");
-        System.out.println("-------------------------------↓↓↓ Vector ↓↓↓--------------------------");
+        System.out.println(
+            "-------------------------------↑↑↑ LinkedList ↑↑↑--------------------------");
+        System.out.println(
+            "-------------------------------↓↓↓ Vector ↓↓↓--------------------------");
 
         Vector<String> vector = new Vector<>();
 
@@ -121,8 +125,10 @@ public class ListExample {
             System.out.println(s);
         }
 
-        System.out.println("-------------------------------↑↑↑ Vector ↑↑↑--------------------------");
-        System.out.println("-------------------------------↓↓↓ Stack ↓↓↓--------------------------");
+        System.out.println(
+            "-------------------------------↑↑↑ Vector ↑↑↑--------------------------");
+        System.out.println(
+            "-------------------------------↓↓↓ Stack ↓↓↓--------------------------");
 
         Stack<Integer> stack = new Stack<>();
 
@@ -142,7 +148,8 @@ public class ListExample {
 
         System.out.println(stack.size());
 
-        System.out.println("-------------------------------↑↑↑ Stack ↑↑↑--------------------------");
+        System.out.println(
+            "-------------------------------↑↑↑ Stack ↑↑↑--------------------------");
 
     }
 
