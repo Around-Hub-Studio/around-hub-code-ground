@@ -1,6 +1,10 @@
 # IDEs
 .idea/
+*.iws
+*.iml
+*.ipr
 .vscode/
+target/
 
 # Compiled class file
 *.class
