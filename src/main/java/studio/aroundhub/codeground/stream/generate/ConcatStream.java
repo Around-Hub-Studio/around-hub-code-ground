@@ -12,4 +12,8 @@ public class ConcatStream {
         concat.forEach(System.out::println);
     }
 
+    public static void main(String[] args){
+        new ConcatStream();
+    }
+
 }

@@ -1,6 +1,6 @@
 package studio.aroundhub.codeground.stream.processing;
 
-import studio.aroundhub.stream.sample.vo.IntegerVo;
+import studio.aroundhub.codeground.stream.vo.IntegerVo;
 
 import java.util.List;
 import java.util.stream.IntStream;

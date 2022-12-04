@@ -1,7 +1,7 @@
 package studio.aroundhub.codeground.stream.resulting;
 
-import studio.aroundhub.stream.sample.vo.IntegerVo;
-import studio.aroundhub.stream.sample.vo.StringVo;
+import studio.aroundhub.codeground.stream.vo.IntegerVo;
+import studio.aroundhub.codeground.stream.vo.StringVo;
 
 import java.util.IntSummaryStatistics;
 import java.util.LinkedList;

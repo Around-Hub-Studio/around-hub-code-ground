@@ -1,6 +1,6 @@
 package studio.aroundhub.codeground.stream.processing;
 
-import studio.aroundhub.stream.sample.vo.StringVo;
+import studio.aroundhub.codeground.stream.vo.StringVo;
 
 import java.util.Arrays;
 import java.util.Collection;

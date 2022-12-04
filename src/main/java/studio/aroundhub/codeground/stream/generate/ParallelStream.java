@@ -26,4 +26,8 @@ public class ParallelStream {
         System.out.println(sequentialStream.isParallel());
     }
 
+    public static void main(String[] args) {
+        new ParallelStream();
+    }
+
 }
