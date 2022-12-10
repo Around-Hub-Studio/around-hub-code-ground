@@ -1,5 +1,8 @@
 package studio.aroundhub.codeground.stream.processing;
 
+import studio.aroundhub.codeground.stream.vo.StringVo;
+
+import java.util.List;
 import java.util.stream.IntStream;
 
 public class Iterating {
@@ -12,6 +15,19 @@ public class Iterating {
                 .sum();
 
         System.out.println(sum);
+        example1();
+    }
+
+    private void example1() {
+        List<StringVo> list = List.of(new StringVo(), new StringVo("kim flature", "saemsuung", "url123"));
+
+        list.stream().filter((vo) -> vo.getName().contains("flature"))
+                .peek((vo) -> System.out.println("peek print : " + vo))
+                .forEach(System.out::println);
+    }
+
+    public static void main(String[] args){
+        new Iterating();
     }
 
 }

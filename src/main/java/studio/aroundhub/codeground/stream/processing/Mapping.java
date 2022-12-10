@@ -17,12 +17,6 @@ public class Mapping {
         Stream<String> stream = list.stream().parallel().map(String::toUpperCase);
         stream.forEach(System.out::println);
 
-        List<StringVo> stringVoList = List.of(
-                new StringVo(),
-                new StringVo(),
-                new StringVo()
-        );
-
         flatMapping();
     }
 
@@ -44,6 +38,10 @@ public class Mapping {
         stringVoList.stream()
                 .flatMap(stringVo -> Stream.of(stringVo.getName(), stringVo.getOrganization()))
                 .forEach(System.out::println);
+    }
+
+    public static void main(String[] args){
+        new Mapping();
     }
 
 }

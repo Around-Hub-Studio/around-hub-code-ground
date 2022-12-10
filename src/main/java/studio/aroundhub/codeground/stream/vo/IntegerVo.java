@@ -2,6 +2,8 @@ package studio.aroundhub.codeground.stream.vo;
 
 import lombok.Getter;
 
+import java.util.Random;
+
 @Getter
 public class IntegerVo {
 
@@ -10,9 +12,10 @@ public class IntegerVo {
     private int number3;
 
     public IntegerVo(){
-        this.number1 = 15;
-        this.number2 = 35;
-        this.number3 = 84;
+        Random random = new Random();
+        this.number1 = random.nextInt(50);
+        this.number2 = random.nextInt(50);
+        this.number3 = random.nextInt(50);
     }
 
     public IntegerVo(int number1, int number2, int number3) {

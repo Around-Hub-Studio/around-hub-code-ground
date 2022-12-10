@@ -2,7 +2,9 @@ package studio.aroundhub.codeground.stream.processing;
 
 import studio.aroundhub.codeground.stream.vo.IntegerVo;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.IntStream;
 
 public class Sorting {
@@ -17,6 +19,21 @@ public class Sorting {
         integerVoList.stream().flatMapToInt(integerVo ->
                 IntStream.of(integerVo.getNumber1(), integerVo.getNumber2(), integerVo.getNumber3()))
                 .sorted().forEach(System.out::println);
+        System.out.println();
+        sortedExample();
+    }
+
+    private void sortedExample(){
+        Random random = new Random();
+        List<Integer> list = new ArrayList<>();
+        for(int i = 0 ; i < 10; i++){
+            list.add(random.nextInt(50));
+        }
+        list.stream().sorted().forEach(System.out::println);
+    }
+
+    public static void main(String[] args){
+        new Sorting();
     }
 
 }

@@ -1,5 +1,7 @@
 package studio.aroundhub.codeground.stream.processing;
 
+import studio.aroundhub.codeground.stream.vo.StringVo;
+
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -14,6 +16,22 @@ public class Filtering {
         Stream<String> stream = list.stream()
                 .filter(word -> word.contains("h"));
         stream.forEach(System.out::println);
+        example1();
+    }
+
+    private void example1() {
+        List<StringVo> list = List.of(new StringVo(), new StringVo("kim flature", "saemsuung", "url123"));
+
+        list.stream().filter((vo) -> vo.getName().contains("flature"))
+                .findFirst()
+                .ifPresent(System.out::println);
+
+        list.stream().filter((vo) -> vo.getName().contains("flature"))
+                .forEach(System.out::println);
+    }
+
+    public static void main(String[] args) {
+        new Filtering();
     }
 
 }
