@@ -21,7 +21,7 @@ public class Collecting {
 
         List<String> list = stringVoList.stream()
                 .map(StringVo::getName)
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()); // .toList() 로 대체 가능
         list.forEach(System.out::println);
 
         Object[] array = stringVoList.stream()
