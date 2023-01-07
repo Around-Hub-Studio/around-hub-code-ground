@@ -24,6 +24,10 @@ public class Collecting {
                 .collect(Collectors.toList());
         list.forEach(System.out::println);
 
+        Object[] array = stringVoList.stream()
+                .map(StringVo::getName)
+                .toArray();
+
         String result = stringVoList.stream()
                 .map(StringVo::getName)
                 .collect(Collectors.joining());
@@ -66,6 +70,10 @@ public class Collecting {
                 stringVoList.stream()
                         .collect(toLinkedList);
         stringVoLinkedList.forEach(stringVo -> System.out.println(stringVo.toString()));
+    }
+
+    public static void main(String[] args){
+        new Collecting();
     }
 
 }
