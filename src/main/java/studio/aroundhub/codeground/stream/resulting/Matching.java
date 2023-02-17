@@ -21,4 +21,8 @@ public class Matching {
         System.out.println(noneMatch);
     }
 
+    public static void main(String[] args){
+        new Matching();
+    }
+
 }

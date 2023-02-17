@@ -17,4 +17,8 @@ public class Calculating {
         System.out.println(IntStream.of().max());
     }
 
+    public static void main(String[] args){
+        new Calculating();
+    }
+
 }
