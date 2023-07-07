@@ -4,6 +4,12 @@ import org.junit.Test;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
+import reactor.test.StepVerifierOptions;
+import reactor.test.scheduler.VirtualTimeScheduler;
+import reactor.util.function.Tuple2;
+import reactor.util.function.Tuples;
+
+import java.time.Duration;
 
 /**
  * expectSubscription() : 구독이 이루어졌는지 확인
@@ -56,6 +62,93 @@ public class TestSample {
         .expectNext(4)
         //.expectNext(1, 2, 3, 4)
         .expectError()
+        .verify();
+  }
+
+  @Test
+  public void takeNumberTest() {
+    Flux<Integer> source = Flux.range(0, 1000);
+    StepVerifier.create(TestTargetClass.takeNumber(source, 500),
+            StepVerifierOptions.create().scenarioName("Verify from 0 to 499"))
+        .expectSubscription()
+        .expectNext(0)
+        .expectNextCount(498)
+        .expectNext(499)
+        .expectComplete()
+        .verify();
+  }
+
+  private Flux<Tuple2<String, Integer>> getCOVID19Count(Flux<Long> source) {
+    return source.flatMap(notUse -> Flux.just(
+        Tuples.of("서울", 10),
+        Tuples.of("경기도", 5),
+        Tuples.of("강원도", 3),
+        Tuples.of("충청도", 6),
+        Tuples.of("경상도", 5),
+        Tuples.of("전라도", 8),
+        Tuples.of("인천", 2),
+        Tuples.of("대전", 1),
+        Tuples.of("대구", 2),
+        Tuples.of("부산", 3),
+        Tuples.of("제주도", 0)
+    ));
+  }
+
+  private Flux<Tuple2<String, Integer>> getVoteCount(Flux<Long> source) {
+    return source
+        .zipWith(Flux.just(
+            Tuples.of("중구", 15400),
+            Tuples.of("서초구", 20020),
+            Tuples.of("강서구", 32040),
+            Tuples.of("강동구", 14506),
+            Tuples.of("서대문구", 35650)
+        )).map(Tuple2::getT2);
+  }
+
+  @Test
+  public void timeBasedTest1() {
+    StepVerifier.withVirtualTime(() ->
+            getCOVID19Count(Flux.interval(Duration.ofHours(1)).take(1))
+        ).expectSubscription()
+        .then(() -> VirtualTimeScheduler.get().advanceTimeBy(Duration.ofHours(1)))
+        .expectNextCount(11)
+        .expectComplete()
+        .verify();
+  }
+
+  @Test
+  public void timeBasedTest2() {
+    StepVerifier.withVirtualTime(() -> // withVirtualTime: VirtualTimeScheduler 의 제어를 받게 해주는 메소드
+            getCOVID19Count(Flux.interval(Duration.ofHours(1)).take(1))
+        ).expectSubscription()
+        .then(() -> VirtualTimeScheduler.get().advanceTimeBy(Duration.ofHours(1))) // 가상으로 1시간을 시간을 댕겨줌
+        .expectNextCount(11)
+        .expectComplete()
+        .verify();
+  }
+
+  @Test
+  public void timeBasedTest3() {
+    StepVerifier.withVirtualTime(() ->
+            getCOVID19Count(Flux.interval(Duration.ofMinutes(1)).take(1))
+        ).expectSubscription()
+        .expectNextCount(11)
+        .expectComplete()
+        .verify(Duration.ofSeconds(3));
+  }
+
+  @Test
+  public void timeBasedTest4() {
+    StepVerifier.withVirtualTime(() ->
+            getVoteCount(Flux.interval(Duration.ofMinutes(1)))
+        ).expectSubscription()
+        .expectNoEvent(Duration.ofMinutes(1)) // 지정한 시간 동안 이벤트가 발생하지 않는 것을 확인하면서 지정한 시간만큼 스킵함
+        .expectNoEvent(Duration.ofMinutes(1))
+        .expectNoEvent(Duration.ofMinutes(1))
+        .expectNoEvent(Duration.ofMinutes(1))
+        .expectNoEvent(Duration.ofMinutes(1))
+        .expectNextCount(5)
+        .expectComplete()
         .verify();
   }
 }
