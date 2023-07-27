@@ -5,7 +5,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.FluxSink;
 import reactor.test.StepVerifier;
 
-public class BackpressureTest {
+public class BackpressureTestSample {
   @Test
   public void generateNumberFailTest() {
     StepVerifier.create(generateNumber(), 1)

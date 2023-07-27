@@ -14,9 +14,9 @@ public class BackpressureSample {
   public BackpressureSample() throws InterruptedException {
     //simpleSample();
     //usingErrorStrategy();
-    //usingDropStrategy();
+    usingDropStrategy();
     //usingLatestStrategy();
-    usingBufferStrategy();
+    //usingBufferStrategy();
   }
 
   private void simpleSample() {
