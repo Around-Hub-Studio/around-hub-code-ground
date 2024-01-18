@@ -1,8 +1,8 @@
 package studio.aroundhub.codeground.solid.ocp;
 
-public class Dog implements Animal{
+public class Bird implements Animal{
   @Override
   public void cry() {
-    System.out.println("멍멍");
+   System.out.println("퍼드득");
   }
 }

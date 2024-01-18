@@ -12,6 +12,8 @@ public class WrongTrainer {
       cat.cry();
     } else if (animal instanceof Dog dog) {
       dog.cry();
+    } else if (animal instanceof Bird bird) {
+      bird.cry();
     }
   }
 }
