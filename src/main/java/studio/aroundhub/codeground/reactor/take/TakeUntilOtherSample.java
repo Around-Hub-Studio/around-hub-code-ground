@@ -1,4 +1,4 @@
-package studio.aroundhub.codeground.reactor.subscribe.take;
+package studio.aroundhub.codeground.reactor.take;
 
 import reactor.core.publisher.Flux;
 
