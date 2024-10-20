@@ -4,38 +4,32 @@ import java.util.Scanner;
 
 public class Main11729 {
 
-    static StringBuilder sb = new StringBuilder();
+  static StringBuilder sb = new StringBuilder();
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
+    int N = sc.nextInt();
 
-        sb.append((int) Math.pow(2, N) - 1).append("\n");
+    sb.append((int) Math.pow(2, N) - 1).append("\n");
 
-        hanoi(N, 1, 2, 3);
+    hanoi(N, 1, 2, 3);
 
+    System.out.println(sb.toString());
+  }
 
-        System.out.println(sb.toString());
+  public static void hanoi(int N, int start, int position, int end) {
 
+    if (N == 1) {
+      sb.append(start + " " + end + "\n");
+      return;
     }
 
-    public static void hanoi(int N, int start, int position, int end) {
+    hanoi(N - 1, start, end, position);
 
-        if(N==1){
-            sb.append(start + " " + end + "\n");
-            return;
-        }
+    sb.append(start + " " + end + "\n");
 
-        hanoi(N-1, start, end, position);
-
-        sb.append(start + " " + end + "\n");
-
-        hanoi(N-1, position, start, end);
-
-
-
-    }
-
+    hanoi(N - 1, position, start, end);
+  }
 }

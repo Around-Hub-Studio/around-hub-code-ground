@@ -1,9 +1,8 @@
 package studio.aroundhub.codeground.lecture.swing.event;
 
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
 
 /**
  * Event Listener Example 3
@@ -15,26 +14,25 @@ import java.awt.event.ActionListener;
  */
 public class EventExample3 extends JFrame implements ActionListener {
 
-    private JButton jButton = new JButton("버튼");
+  private JButton jButton = new JButton("버튼");
 
-    public EventExample3() {
+  public EventExample3() {
 
-        setSize(500, 500);
+    setSize(500, 500);
 
-        jButton.addActionListener(this);
-        add(jButton);
+    jButton.addActionListener(this);
+    add(jButton);
 
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setVisible(true);
+    setDefaultCloseOperation(EXIT_ON_CLOSE);
+    setVisible(true);
+  }
 
-    }
+  @Override
+  public void actionPerformed(ActionEvent e) {
+    System.out.println("호출!");
+  }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        System.out.println("호출!");
-    }
-
-    public static void main(String[] args) {
-        new EventExample4();
-    }
+  public static void main(String[] args) {
+    new EventExample4();
+  }
 }

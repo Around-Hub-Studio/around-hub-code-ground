@@ -6,5 +6,5 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Getter
 public class CustomException extends RuntimeException {
-    private final int id;
+  private final int id;
 }

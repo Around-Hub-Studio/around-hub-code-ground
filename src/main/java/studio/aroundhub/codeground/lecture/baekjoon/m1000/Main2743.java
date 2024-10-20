@@ -4,12 +4,10 @@ import java.util.Scanner;
 
 public class Main2743 {
 
-    public static void main(String[] args){
+  public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-        System.out.println(sc.next().length());
-
-    }
-
+    System.out.println(sc.next().length());
+  }
 }

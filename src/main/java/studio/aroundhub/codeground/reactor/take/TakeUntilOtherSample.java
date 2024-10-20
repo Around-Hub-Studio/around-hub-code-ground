@@ -1,8 +1,8 @@
 package studio.aroundhub.codeground.reactor.take;
 
-import reactor.core.publisher.Flux;
-
 import java.time.Duration;
+
+import reactor.core.publisher.Flux;
 
 public class TakeUntilOtherSample {
   public static void main(String[] args) throws InterruptedException {
@@ -13,8 +13,7 @@ public class TakeUntilOtherSample {
     Flux<Long> other = Flux.interval(Duration.ofSeconds(1)).take(1);
 
     // 종료 신호가 올 때까지 데이터 방출
-    flux.takeUntilOther(other)
-            .subscribe(data -> System.out.println("Received: " + data));
+    flux.takeUntilOther(other).subscribe(data -> System.out.println("Received: " + data));
 
     // Flux가 끝날 때까지 대기
     Thread.sleep(2000); // 2초 대기

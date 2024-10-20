@@ -4,25 +4,24 @@ import java.util.Scanner;
 
 public class Main1110 {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
+    int N = sc.nextInt();
 
-        int count = 0;
-        int copy = N;
+    int count = 0;
+    int copy = N;
 
-        while (true) {
-            copy = ((copy % 10) * 10) + (((copy / 10) + (copy % 10)) % 10);
-            count++;
+    while (true) {
+      copy = ((copy % 10) * 10) + (((copy / 10) + (copy % 10)) % 10);
+      count++;
 
-            if (copy == N) {
-                break;
-            }
-        }
-
-        System.out.println(count);
+      if (copy == N) {
+        break;
+      }
     }
 
+    System.out.println(count);
+  }
 }

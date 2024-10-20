@@ -6,7 +6,7 @@ public class EqualClass {
   private final int x;
   private final String y;
 
-  EqualClass(int x, String y){
+  EqualClass(int x, String y) {
     this.x = x;
     this.y = y;
   }
@@ -34,9 +34,6 @@ public class EqualClass {
 
   @Override
   public String toString() {
-    return "EqualClass{" +
-            "x=" + x +
-            ", y='" + y + '\'' +
-            '}';
+    return "EqualClass{" + "x=" + x + ", y='" + y + '\'' + '}';
   }
 }

@@ -6,20 +6,18 @@ import java.io.InputStreamReader;
 
 public class NumberPrefix {
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        String input = br.readLine();
-        int count = 1;
+    String input = br.readLine();
+    int count = 1;
 
-        while(!input.isEmpty()){
-            input = input.replaceAll("Y", "TRUE");
-            input = input.replaceAll("N", "FALSE");
+    while (!input.isEmpty()) {
+      input = input.replaceAll("Y", "TRUE");
+      input = input.replaceAll("N", "FALSE");
 
-            System.out.println(count++ + "," + input);
-            input = br.readLine();
-        }
-
+      System.out.println(count++ + "," + input);
+      input = br.readLine();
     }
-
+  }
 }

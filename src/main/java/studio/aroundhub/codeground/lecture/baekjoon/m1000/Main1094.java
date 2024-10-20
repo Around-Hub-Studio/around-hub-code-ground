@@ -4,24 +4,23 @@ import java.util.Scanner;
 
 public class Main1094 {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-        int bar = 64;
+    int bar = 64;
 
-        int x = sc.nextInt();
+    int x = sc.nextInt();
 
-        int count = 0;
-        while (x > 0) {
-            if(bar>x){
-                bar/=2;
-            }else{
-                x-=bar;
-                count++;
-            }
-        }
-        System.out.println(count);
+    int count = 0;
+    while (x > 0) {
+      if (bar > x) {
+        bar /= 2;
+      } else {
+        x -= bar;
+        count++;
+      }
     }
-
+    System.out.println(count);
+  }
 }

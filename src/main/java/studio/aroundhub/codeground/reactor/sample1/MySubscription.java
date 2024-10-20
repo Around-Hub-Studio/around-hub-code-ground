@@ -16,16 +16,18 @@ public class MySubscription implements Flow.Subscription {
 
   @Override
   public void request(long n) {
-    System.out.println("Thread " + Thread.currentThread().getName() + ", " + "Called request() in MySubscription");
+    System.out.println(
+        "Thread " + Thread.currentThread().getName() + ", " + "Called request() in MySubscription");
     if (!canceled) {
-      executor.submit(() -> {
-        for (int i = 0; i < n; i++) {
-          if (canceled) {
-            break;
-          }
-          publisher.notifySubscribers(new Message(i, "Message " + i));
-        }
-      });
+      executor.submit(
+          () -> {
+            for (int i = 0; i < n; i++) {
+              if (canceled) {
+                break;
+              }
+              publisher.notifySubscribers(new Message(i, "Message " + i));
+            }
+          });
     }
   }
 

@@ -12,7 +12,7 @@ public class Sample {
     update(list);
   }
 
-  void update(Collection list){
+  void update(Collection list) {
     list.add(new Object());
   }
 
@@ -23,7 +23,7 @@ public class Sample {
     newUpdate(set);
   }
 
-  void newUpdate(Collection set){
+  void newUpdate(Collection set) {
     set.add(new Object());
   }
 }

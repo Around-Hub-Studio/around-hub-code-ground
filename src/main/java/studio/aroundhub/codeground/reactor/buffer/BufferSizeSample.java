@@ -9,8 +9,9 @@ public class BufferSizeSample {
 
     // 3개씩 데이터를 묶어 버퍼링
     fastPublisher
-            .buffer(3)
-            .subscribe(bufferedData -> {
+        .buffer(3)
+        .subscribe(
+            bufferedData -> {
               System.out.println("Buffered data: " + bufferedData);
             });
   }

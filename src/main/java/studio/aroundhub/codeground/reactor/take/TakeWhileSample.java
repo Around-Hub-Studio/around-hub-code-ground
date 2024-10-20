@@ -7,7 +7,6 @@ public class TakeWhileSample {
     Flux<Integer> flux = Flux.range(1, 10);
 
     // 값이 5 미만일 때까지 데이터 방출
-    flux.takeWhile(i -> i < 5)
-            .subscribe(data -> System.out.println("Received: " + data));
+    flux.takeWhile(i -> i < 5).subscribe(data -> System.out.println("Received: " + data));
   }
 }

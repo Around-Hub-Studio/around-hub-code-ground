@@ -9,65 +9,62 @@ import java.util.StringTokenizer;
 
 public class Main2178 {
 
-    static int[][] board;
-    static boolean[][] visited;
-    final static int[] dx = new int[]{-1, 1, 0, 0};
-    final static int[] dy = new int[]{0, 0, 1, -1};
+  static int[][] board;
+  static boolean[][] visited;
+  static final int[] dx = new int[] {-1, 1, 0, 0};
+  static final int[] dy = new int[] {0, 0, 1, -1};
 
-    public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer st;
 
-        st = new StringTokenizer(br.readLine(), " ");
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
+    st = new StringTokenizer(br.readLine(), " ");
+    int N = Integer.parseInt(st.nextToken());
+    int M = Integer.parseInt(st.nextToken());
 
-        board = new int[N][M];
-        visited = new boolean[N][M];
+    board = new int[N][M];
+    visited = new boolean[N][M];
 
-        for (int i = 0; i < N; i++) {
-            String line = br.readLine();
-            for (int j = 0; j < M; j++) {
-                board[i][j] = Integer.parseInt(String.valueOf(line.charAt(j)));
-            }
-        }
-
-        bfs();
-        System.out.println(board[N - 1][M - 1]);
+    for (int i = 0; i < N; i++) {
+      String line = br.readLine();
+      for (int j = 0; j < M; j++) {
+        board[i][j] = Integer.parseInt(String.valueOf(line.charAt(j)));
+      }
     }
 
-    static void bfs() {
-        Queue<Integer> xQueue = new LinkedList<>();
-        Queue<Integer> yQueue = new LinkedList<>();
+    bfs();
+    System.out.println(board[N - 1][M - 1]);
+  }
 
-        xQueue.offer(0);
-        yQueue.offer(0);
+  static void bfs() {
+    Queue<Integer> xQueue = new LinkedList<>();
+    Queue<Integer> yQueue = new LinkedList<>();
 
-        visited[0][0] = true;
+    xQueue.offer(0);
+    yQueue.offer(0);
 
-        while (!xQueue.isEmpty() && !yQueue.isEmpty()) {
-            int x = xQueue.poll();
-            int y = yQueue.poll();
+    visited[0][0] = true;
 
-            for (int i = 0; i < dx.length; i++) {
-                int tempX = x + dx[i];
-                int tempY = y + dy[i];
+    while (!xQueue.isEmpty() && !yQueue.isEmpty()) {
+      int x = xQueue.poll();
+      int y = yQueue.poll();
 
-                if (tempX >= 0 && tempX < board.length && tempY >= 0 && tempY < board[0].length) {
-                    if (board[tempX][tempY] == 1 && !visited[tempX][tempY]) {
-                        xQueue.offer(tempX);
-                        yQueue.offer(tempY);
+      for (int i = 0; i < dx.length; i++) {
+        int tempX = x + dx[i];
+        int tempY = y + dy[i];
 
-                        visited[tempX][tempY] = true;
+        if (tempX >= 0 && tempX < board.length && tempY >= 0 && tempY < board[0].length) {
+          if (board[tempX][tempY] == 1 && !visited[tempX][tempY]) {
+            xQueue.offer(tempX);
+            yQueue.offer(tempY);
 
-                        board[tempX][tempY] = board[x][y] + 1;
-                    }
-                }
-            }
+            visited[tempX][tempY] = true;
 
+            board[tempX][tempY] = board[x][y] + 1;
+          }
         }
+      }
     }
-
-
+  }
 }

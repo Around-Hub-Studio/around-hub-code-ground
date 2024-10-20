@@ -8,8 +8,7 @@ import java.util.stream.Stream;
 
 public class FileStream {
 
-    public FileStream() throws IOException {
-        Stream<String> stream = Files.lines(Paths.get("file.txt"), StandardCharsets.UTF_8);
-    }
-
+  public FileStream() throws IOException {
+    Stream<String> stream = Files.lines(Paths.get("file.txt"), StandardCharsets.UTF_8);
+  }
 }

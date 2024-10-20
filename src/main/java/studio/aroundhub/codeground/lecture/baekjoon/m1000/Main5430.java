@@ -7,76 +7,74 @@ import java.util.StringTokenizer;
 
 public class Main5430 {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        StringTokenizer st;
-        int T = sc.nextInt();
+    Scanner sc = new Scanner(System.in);
+    StringTokenizer st;
+    int T = sc.nextInt();
 
-        for (int t = 0; t < T; t++) {
+    for (int t = 0; t < T; t++) {
 
-            StringBuilder sb = new StringBuilder();
-            char[] input = (sc.next()).toCharArray();
+      StringBuilder sb = new StringBuilder();
+      char[] input = (sc.next()).toCharArray();
 
-            int n = sc.nextInt();
+      int n = sc.nextInt();
 
-            Deque<Integer> linkedList = new LinkedList<>();
-            st = new StringTokenizer(sc.next(), "[],");
+      Deque<Integer> linkedList = new LinkedList<>();
+      st = new StringTokenizer(sc.next(), "[],");
 
-            for (int i = 0; i < n; i++) {
-                linkedList.offer(Integer.parseInt(st.nextToken()));
-            }
+      for (int i = 0; i < n; i++) {
+        linkedList.offer(Integer.parseInt(st.nextToken()));
+      }
 
-            boolean check = false;
-            boolean isRight = false;
-            for (int i = 0; i < input.length; i++) {
-                char temp = input[i];
+      boolean check = false;
+      boolean isRight = false;
+      for (int i = 0; i < input.length; i++) {
+        char temp = input[i];
 
-                if (temp == 'R') {
+        if (temp == 'R') {
 
-                    isRight = !isRight;
+          isRight = !isRight;
 
-                } else {
+        } else {
 
-                    if (linkedList.isEmpty()) {
-                        System.out.println("error");
-                        check = true;
-                        break;
-                    } else {
-                        if (isRight) {
-                            linkedList.pollLast();
-                        } else {
-                            linkedList.pollFirst();
-                        }
-                    }
-
-                }
-            }
-
-            if (check) {
-                continue;
-            }
-
-            sb.append("[");
+          if (linkedList.isEmpty()) {
+            System.out.println("error");
+            check = true;
+            break;
+          } else {
             if (isRight) {
-                while (linkedList.size() > 1) {
-                    sb.append(linkedList.pollLast()).append(",");
-                }
-                if (!linkedList.isEmpty()) {
-                    sb.append(linkedList.pollLast());
-                }
+              linkedList.pollLast();
             } else {
-                while (linkedList.size() > 1) {
-                    sb.append(linkedList.pollFirst()).append(",");
-                }
-                if (!linkedList.isEmpty()) {
-                    sb.append(linkedList.pollFirst());
-                }
+              linkedList.pollFirst();
             }
-            sb.append("]");
-
-            System.out.println(sb);
+          }
         }
-    }
+      }
 
+      if (check) {
+        continue;
+      }
+
+      sb.append("[");
+      if (isRight) {
+        while (linkedList.size() > 1) {
+          sb.append(linkedList.pollLast()).append(",");
+        }
+        if (!linkedList.isEmpty()) {
+          sb.append(linkedList.pollLast());
+        }
+      } else {
+        while (linkedList.size() > 1) {
+          sb.append(linkedList.pollFirst()).append(",");
+        }
+        if (!linkedList.isEmpty()) {
+          sb.append(linkedList.pollFirst());
+        }
+      }
+      sb.append("]");
+
+      System.out.println(sb);
+    }
+  }
 }

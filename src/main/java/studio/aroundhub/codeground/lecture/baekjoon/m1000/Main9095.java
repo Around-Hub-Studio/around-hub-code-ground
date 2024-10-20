@@ -4,18 +4,15 @@ import java.util.Scanner;
 
 public class Main9095 {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-        int T = sc.nextInt();
+    int T = sc.nextInt();
 
-        for (int t = 0; t < T; t++) {
+    for (int t = 0; t < T; t++) {
 
-            int n = sc.nextInt();
-
-        }
-
+      int n = sc.nextInt();
     }
-
+  }
 }

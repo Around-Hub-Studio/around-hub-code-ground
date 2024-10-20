@@ -6,20 +6,18 @@ import java.util.Scanner;
 
 public class Main1427 {
 
-    public static void main(String[] args){
+  public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-        String input = sc.next();
+    String input = sc.next();
 
-        String[] array =input.split("");
+    String[] array = input.split("");
 
-        Arrays.sort(array, Comparator.reverseOrder());
+    Arrays.sort(array, Comparator.reverseOrder());
 
-        for(int i = 0 ;i < array.length;i++){
-            System.out.print(array[i]);
-        }
-
+    for (int i = 0; i < array.length; i++) {
+      System.out.print(array[i]);
     }
-
+  }
 }

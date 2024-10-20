@@ -7,7 +7,6 @@ public class TakeSample {
     Flux<Integer> flux = Flux.range(1, 10);
 
     // 처음 3개의 데이터만 방출
-    flux.take(3)
-            .subscribe(data -> System.out.println("Received: " + data));
+    flux.take(3).subscribe(data -> System.out.println("Received: " + data));
   }
 }

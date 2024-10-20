@@ -16,62 +16,58 @@ import java.util.Scanner;
 
 public class Main9020 {
 
-    // 에라토스테네스의 체 알고리즘을 통해 소수 판별을 하기 위한 배열
-    static boolean[] arr;
+  // 에라토스테네스의 체 알고리즘을 통해 소수 판별을 하기 위한 배열
+  static boolean[] arr;
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-        // 최대 크기가 10000이기 때문에 아래와 같이 설정
-        arr = new boolean[10001];
+    // 최대 크기가 10000이기 때문에 아래와 같이 설정
+    arr = new boolean[10001];
 
-        // 테스트 케이스를 진행하기 전에 에라토스테네스의 체 알고리즘을 수행하여 값 도출을 미리 진행
-        cal(10000);
+    // 테스트 케이스를 진행하기 전에 에라토스테네스의 체 알고리즘을 수행하여 값 도출을 미리 진행
+    cal(10000);
 
-        int t = sc.nextInt();
+    int t = sc.nextInt();
 
-        for (int T = 0; T < t; T++) {
+    for (int T = 0; T < t; T++) {
 
-            // 짝수 값 입력
-            int input = sc.nextInt();
+      // 짝수 값 입력
+      int input = sc.nextInt();
 
-            int half = input / 2;
-            int left = half, right = half;
+      int half = input / 2;
+      int left = half, right = half;
 
-            // 골드바흐 파티션이 여러 개 존재하는 경우에 두 값의 차이가 작은 것을 출력하기 때문에 중간값부터 조회
-            while (true) {
-                if (!arr[left] && !arr[right]) {
-                    System.out.println(left + " " + right);
-                    break;
-                }
-                left--;
-                right++;
-            }
-
+      // 골드바흐 파티션이 여러 개 존재하는 경우에 두 값의 차이가 작은 것을 출력하기 때문에 중간값부터 조회
+      while (true) {
+        if (!arr[left] && !arr[right]) {
+          System.out.println(left + " " + right);
+          break;
         }
-
+        left--;
+        right++;
+      }
     }
+  }
 
-    // 에라토스테네스의 체
-    public static void cal(int max) {
-        arr[0] = true;
-        arr[1] = true;
+  // 에라토스테네스의 체
+  public static void cal(int max) {
+    arr[0] = true;
+    arr[1] = true;
 
-        if (max < 2) {
-            return;
-        }
-        for (int i = 2; i < Math.sqrt(arr.length); i++) {
-
-            if (arr[i]) {
-                continue;
-            }
-
-            for (int j = i * i; j < max + 1; j = j + i) {
-                arr[j] = true;
-            }
-
-        }
+    if (max < 2) {
+      return;
     }
+    for (int i = 2; i < Math.sqrt(arr.length); i++) {
 
+      if (arr[i]) {
+        continue;
+      }
+
+      for (int j = i * i; j < max + 1; j = j + i) {
+        arr[j] = true;
+      }
+    }
+  }
 }

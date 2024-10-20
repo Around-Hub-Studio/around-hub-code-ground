@@ -4,26 +4,24 @@ import java.util.Scanner;
 
 public class Main1152 {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-        String ac = sc.nextLine();
+    String ac = sc.nextLine();
 
-        ac = ac.trim();
+    ac = ac.trim();
 
-        String[] aa = ac.split(" ");
+    String[] aa = ac.split(" ");
 
-        int count = 0;
+    int count = 0;
 
-        for (int i = 0; i < aa.length; i++) {
-            if (!aa[i].equals("")) {
-                count++;
-            }
-        }
-
-        System.out.println(count);
-
+    for (int i = 0; i < aa.length; i++) {
+      if (!aa[i].equals("")) {
+        count++;
+      }
     }
 
+    System.out.println(count);
+  }
 }

@@ -1,5 +1,3 @@
 package studio.aroundhub.codeground.lecture.conventions;
 
-public class ParentClass {
-
-}
+public class ParentClass {}

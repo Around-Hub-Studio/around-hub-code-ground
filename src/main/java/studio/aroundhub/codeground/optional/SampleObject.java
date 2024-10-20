@@ -10,8 +10,7 @@ import lombok.*;
 @ToString
 public class SampleObject {
 
-    private String name;
-    private String age;
-    private String organization;
-
+  private String name;
+  private String age;
+  private String organization;
 }

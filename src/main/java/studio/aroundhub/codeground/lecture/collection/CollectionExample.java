@@ -4,43 +4,42 @@ import java.util.*;
 
 public class CollectionExample {
 
-    public static void main(String[] args){
+  public static void main(String[] args) {
 
-        ArrayList arrayList;
+    ArrayList arrayList;
 
-        LinkedList linkedList;
+    LinkedList linkedList;
 
-        Vector vector;
+    Vector vector;
 
-        Stack stack;
+    Stack stack;
 
-        //--------------------
+    // --------------------
 
-        Queue queue;
+    Queue queue;
 
-        PriorityQueue priorityQueue;
+    PriorityQueue priorityQueue;
 
-        //--------------------
+    // --------------------
 
-        HashSet hashSet;
+    HashSet hashSet;
 
-        TreeSet treeSet;
+    TreeSet treeSet;
 
-        SortedSet sortedSet;
+    SortedSet sortedSet;
 
-        LinkedHashSet linkedHashSet;
+    LinkedHashSet linkedHashSet;
 
-        //--------------------
+    // --------------------
 
-        TreeMap treeMap;
+    TreeMap treeMap;
 
-        HashMap hashMap;
+    HashMap hashMap;
 
-        //--------------------
+    // --------------------
 
-        SortedMap sortedMap;
+    SortedMap sortedMap;
 
-        Hashtable hashtable;
-
-    }
+    Hashtable hashtable;
+  }
 }

@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 
 public class DateTimeSample {
 
-  public static void main(String[] args){
+  public static void main(String[] args) {
     ZonedDateTime a = ZonedDateTime.now();
     System.out.println(a);
 
@@ -33,5 +33,4 @@ public class DateTimeSample {
     LocalDateTime h = c.toLocalDateTime();
     System.out.println(h);
   }
-
 }

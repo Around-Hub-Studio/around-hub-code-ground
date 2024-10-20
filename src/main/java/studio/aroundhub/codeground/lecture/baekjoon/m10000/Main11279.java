@@ -9,35 +9,32 @@ import java.util.Scanner;
 
 public class Main11279 {
 
-    public static void main(String[] args) throws IOException {
+  public static void main(String[] args) throws IOException {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringBuilder sb = new StringBuilder();
 
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Comparator.reverseOrder());
+    PriorityQueue<Integer> priorityQueue = new PriorityQueue<>(Comparator.reverseOrder());
 
-        int N = Integer.parseInt(br.readLine());
+    int N = Integer.parseInt(br.readLine());
 
-        for(int i = 0 ;i < N ; i++){
+    for (int i = 0; i < N; i++) {
 
-            int tmp = Integer.parseInt(br.readLine());
+      int tmp = Integer.parseInt(br.readLine());
 
-            if(tmp==0){
-                if(priorityQueue.isEmpty()){
-                    sb.append(0).append("\n");
-                }else{
-                    sb.append(priorityQueue.poll()).append("\n");
-                }
-            }else{
-                priorityQueue.offer(tmp);
-            }
-
+      if (tmp == 0) {
+        if (priorityQueue.isEmpty()) {
+          sb.append(0).append("\n");
+        } else {
+          sb.append(priorityQueue.poll()).append("\n");
         }
-
-        System.out.println(sb);
-
+      } else {
+        priorityQueue.offer(tmp);
+      }
     }
 
+    System.out.println(sb);
+  }
 }

@@ -8,7 +8,8 @@ public class BufferWhileSample {
 
     // Predicate가 true를 반환하는 동안에만 버퍼를 생성
     flux.bufferWhile(i -> i < 5)
-            .subscribe(bufferedData -> {
+        .subscribe(
+            bufferedData -> {
               System.out.println("Buffered data: " + bufferedData);
             });
   }

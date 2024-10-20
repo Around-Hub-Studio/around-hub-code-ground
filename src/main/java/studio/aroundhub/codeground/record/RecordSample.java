@@ -1,4 +1,3 @@
 package studio.aroundhub.codeground.record;
 
-public record RecordSample(int x, String y) {
-}
+public record RecordSample(int x, String y) {}

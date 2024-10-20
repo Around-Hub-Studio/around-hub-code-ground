@@ -11,67 +11,63 @@ import java.util.Scanner;
 
 public class Main4948 {
 
-    // 에라토스테네스의 체 알고리즘을 통해 소수 판별을 하기 위한 배열
-    static boolean[] arr;
+  // 에라토스테네스의 체 알고리즘을 통해 소수 판별을 하기 위한 배열
+  static boolean[] arr;
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
-        while (true) {
+    while (true) {
 
-            int M = sc.nextInt();
+      int M = sc.nextInt();
 
-            // M에 0 값이 들어오는 경우 테스트 케이스를 종료
-            if (M == 0) {
-                break;
-            }
+      // M에 0 값이 들어오는 경우 테스트 케이스를 종료
+      if (M == 0) {
+        break;
+      }
 
-            // 계산하고자 하는 범위가 n~2n 이기 때문에 최대값 설정
-            int N = 2 * M;
+      // 계산하고자 하는 범위가 n~2n 이기 때문에 최대값 설정
+      int N = 2 * M;
 
-            arr = new boolean[N + 1];
-            cal(N);
+      arr = new boolean[N + 1];
+      cal(N);
 
-            // 소수를 계산하기 위한 필드 값
-            int count = 0;
+      // 소수를 계산하기 위한 필드 값
+      int count = 0;
 
-            // n보다 큰 수부터 시작하기 때문에 M + 1
-            // 2N보다 작은 수까지 진행하기 때문에 <
-            for (int i = M + 1; i < arr.length; i++) {
-                if (!arr[i]) {
-                    //System.out.println(i);
-                    count++;
-                }
-            }
-
-            // 결과값 출력
-            System.out.println(count);
-
+      // n보다 큰 수부터 시작하기 때문에 M + 1
+      // 2N보다 작은 수까지 진행하기 때문에 <
+      for (int i = M + 1; i < arr.length; i++) {
+        if (!arr[i]) {
+          // System.out.println(i);
+          count++;
         }
+      }
 
+      // 결과값 출력
+      System.out.println(count);
+    }
+  }
+
+  // 에라토스테네스의 체
+  public static void cal(int max) {
+    arr[0] = true;
+    arr[1] = true;
+
+    if (max < 2) {
+      return;
     }
 
-    // 에라토스테네스의 체
-    public static void cal(int max) {
-        arr[0] = true;
-        arr[1] = true;
+    for (int i = 2; i < Math.sqrt(arr.length); i++) {
 
-        if (max < 2) {
-            return;
-        }
+      if (arr[i]) {
+        continue;
+      }
 
-        for (int i = 2; i < Math.sqrt(arr.length); i++) {
-
-            if (arr[i]) {
-                continue;
-            }
-
-            for (int j = i * i; j < max + 1; j = j + i) {
-                arr[j] = true;
-            }
-
-        }
+      for (int j = i * i; j < max + 1; j = j + i) {
+        arr[j] = true;
+      }
     }
-
+  }
 }

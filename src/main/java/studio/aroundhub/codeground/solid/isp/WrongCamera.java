@@ -1,6 +1,6 @@
 package studio.aroundhub.codeground.solid.isp;
 
-public class WrongCamera implements SmartPhone{
+public class WrongCamera implements SmartPhone {
   @Override
   public void call() {
     System.out.println("What is this?");

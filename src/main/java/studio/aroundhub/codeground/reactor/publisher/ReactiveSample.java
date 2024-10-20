@@ -9,10 +9,10 @@ public class ReactiveSample {
     Flux<String> flux = Flux.just("Hello", "Flux", "World");
 
     flux.concatWith(mono)
-      .subscribe(
-          data -> System.out.println("Data: " + data), // onNext
-          error -> System.err.println("Error: " + error), // onError
-          () -> System.out.println("Process complete.") // onComplete
-      );
+        .subscribe(
+            data -> System.out.println("Data: " + data), // onNext
+            error -> System.err.println("Error: " + error), // onError
+            () -> System.out.println("Process complete.") // onComplete
+            );
   }
 }
