@@ -1,5 +1,7 @@
 package studio.aroundhub.codeground.lecture.chatgpt;
 
+import java.util.*;
+
 /*
 문제 11 — 미로의 최단 거리 (BFS)
 
@@ -52,8 +54,60 @@ N행 M열의 미로가 있습니다. 1은 이동 가능한 칸이고 0은 벽입
  */
 public class Practice11Bfs {
 
-    public static void main(String[] args) {
+    static int[][] map;
+    static int[][] count;
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        map = new int[n][m];
+        count = new int[n][m];
+
+        for (int i = 0; i < n; i++) {
+            String input = sc.next();
+            for (int j = 0; j < m; j++) {
+                map[i][j] = input.charAt(j) - '0';
+            }
+
+            Arrays.fill(count[i], -1);
+        }
+
+        bfs();
+
+        System.out.println(count[n - 1][m - 1]);
+    }
+
+    static void bfs() {
+        int[] dx = new int[]{-1, 1, 0, 0};
+        int[] dy = new int[]{0, 0, -1, 1};
+
+        Queue<int[]> queue = new LinkedList<>();
+        queue.offer(new int[]{0, 0});
+        count[0][0] = 0;
+
+        while (!queue.isEmpty()) {
+            int[] cur = queue.poll();
+            int row = cur[0];
+            int col = cur[1];
+
+            for (int direction = 0; direction < 4; direction++) {
+                int nextRow = row + dx[direction];
+                int nextCol = col + dy[direction];
+
+                if (nextRow < 0 || nextRow >= map.length || nextCol < 0 || nextCol >= map[0].length) {
+                    continue;
+                }
+
+                if (map[nextRow][nextCol] == 0 || count[nextRow][nextCol] != -1) {
+                    continue;
+                }
+
+                count[nextRow][nextCol] = count[row][col] + 1;
+                queue.offer(new int[]{nextRow, nextCol});
+            }
+        }
     }
 }
 

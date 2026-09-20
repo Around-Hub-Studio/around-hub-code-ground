@@ -1,5 +1,9 @@
 package studio.aroundhub.codeground.lecture.chatgpt;
 
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Scanner;
+
 /*
 문제 6 — 달리기 순위표 (정렬)
 
@@ -44,6 +48,25 @@ N명의 참가자 번호와 달리기 기록이 주어집니다.
 public class Practice06Sort {
 
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+
+        int[][] arr=new int[n][2];
+        for(int i=0;i<n;i++) {
+            arr[i][0]=sc.nextInt();
+            arr[i][1]=sc.nextInt();
+        }
+
+        Arrays.sort(arr, (a, b) -> {
+            if(a[1]==b[1]) {
+                return Integer.compare(a[0],b[0]);
+            }
+            return Integer.compare(a[1],b[1]);
+        });
+
+        for(int[] o : arr) {
+            System.out.println(o[0]);
+        }
 
     }
 }

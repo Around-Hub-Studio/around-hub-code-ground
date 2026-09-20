@@ -1,5 +1,9 @@
 package studio.aroundhub.codeground.lecture.chatgpt;
 
+import java.util.Map;
+import java.util.Scanner;
+import java.util.TreeMap;
+
 /*
 문제 4 — 가장 인기 있는 간식 (맵)
 
@@ -45,6 +49,30 @@ cake 2
 public class Practice04Map {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        Map<String,Integer> map = new TreeMap<>();
+        for(int i=0;i<n;i++){
+           String input = sc.next();
+           int a = map.getOrDefault(input,-1);
+           if(a!=-1){
+               map.put(input,a+1);
+           }else {
+               map.put(input,1);
+           }
+        }
+
+        int max = 0;
+        String key = null;
+        for(Map.Entry<String,Integer> entry:map.entrySet()){
+            if(entry.getValue()>max){
+                max = entry.getValue();
+                key = entry.getKey();
+            }
+        }
+
+        System.out.println(key + " " + max);
 
     }
 }

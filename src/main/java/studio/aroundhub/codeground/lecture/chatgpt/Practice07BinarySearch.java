@@ -1,5 +1,7 @@
 package studio.aroundhub.codeground.lecture.chatgpt;
 
+import java.util.*;
+
 /*
 문제 7 — 상품 번호 찾기 (이분 탐색)
 
@@ -48,8 +50,44 @@ package studio.aroundhub.codeground.lecture.chatgpt;
  */
 public class Practice07BinarySearch {
 
-    public static void main(String[] args) {
+    static List<Integer> list = new ArrayList<>();
+    static List<Integer> list2 = new ArrayList<>();
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            list.add(sc.nextInt());
+        }
+
+        int m = sc.nextInt();
+        for (int i = 0; i < m; i++) {
+            list2.add(sc.nextInt());
+        }
+
+        Collections.sort(list);
+
+        for (int i : list2) {
+            int result = binarySearch(i, 0, list.size() - 1);
+            System.out.println(result);
+        }
+
+    }
+
+    static int binarySearch(int key, int low, int high) {
+        int mid;
+        while (low <= high) {
+            mid = (low + high) / 2;
+
+            if (key == list.get(mid)) {
+                return 1;
+            } else if (key < list.get(mid)) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+        return 0;
     }
 }
 

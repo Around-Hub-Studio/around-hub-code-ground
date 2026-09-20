@@ -64,7 +64,7 @@ public class Practice01Stack {
             if(input != 0){
                 list.add(input);
             }else {
-                list.pop();
+                list.removeLast();
             }
         }
 

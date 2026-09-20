@@ -1,5 +1,10 @@
 package studio.aroundhub.codeground.lecture.chatgpt;
 
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
 /*
 문제 3 — 양쪽에서 꺼내는 상자 (덱)
 
@@ -55,6 +60,35 @@ POP_FRONT
 public class Practice03Deque {
 
     public static void main(String[] args) {
+        Scanner sc =  new Scanner(System.in);
+        int total = sc.nextInt();
+
+        Deque<Integer> deque = new LinkedList<>();
+
+        for (int i = 0; i < total; i++) {
+            String input = sc.next();
+            if(input.equalsIgnoreCase("BACK")) {
+                int number = sc.nextInt();
+                deque.offer(number);
+            }else if(input.equalsIgnoreCase("FRONT")) {
+                int number = sc.nextInt();
+                deque.addFirst(number);
+            }else if(input.equalsIgnoreCase("POP_FRONT")) {
+                if(deque.isEmpty()) {
+                    System.out.println("-1");
+                    continue;
+                }
+                int out = deque.pollFirst();
+                System.out.println(out);
+            }else if(input.equalsIgnoreCase("POP_BACK")) {
+                if(deque.isEmpty()) {
+                    System.out.println("-1");
+                    continue;
+                }
+                int out = deque.pollLast();
+                System.out.println(out);
+            }
+        }
 
     }
 }

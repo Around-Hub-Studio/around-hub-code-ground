@@ -1,5 +1,10 @@
 package studio.aroundhub.codeground.lecture.chatgpt;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Stack;
+
 /*
 문제 10 — 연결된 컴퓨터 찾기 (DFS)
 
@@ -47,7 +52,57 @@ package studio.aroundhub.codeground.lecture.chatgpt;
  */
 public class Practice10Dfs {
 
+    static boolean[] visited;
+    static List<Integer>[] list;
+    static ArrayList<Integer> procedure;
+
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        list = new ArrayList[n + 1];
+        visited = new boolean[n + 1];
+        procedure = new ArrayList<>();
+
+        for (int i = 1; i <= n; i++) {
+            list[i] = new ArrayList<>();
+        }
+
+        for (int i = 1; i <= m; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            list[a].add(b);
+            list[b].add(a);
+        }
+
+        dfs(1);
+
+        int sum = 0;
+        for (boolean b : visited) {
+            if (b) {
+                sum += 1;
+            }
+        }
+
+        System.out.println(sum - 1);
+    }
+
+    static void dfs(int i) {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(i);
+
+        while (!stack.isEmpty()) {
+            int current = stack.pop();
+            visited[current] = true;
+            procedure.add(current);
+
+            for (int j : list[current]) {
+                if (!visited[j]) {
+                    stack.push(j);
+                }
+            }
+        }
 
     }
 }

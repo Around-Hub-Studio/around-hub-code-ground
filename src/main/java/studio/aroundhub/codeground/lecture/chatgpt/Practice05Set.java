@@ -1,5 +1,9 @@
 package studio.aroundhub.codeground.lecture.chatgpt;
 
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
 /*
 문제 5 — 두 동아리의 공통 회원 (집합)
 
@@ -44,6 +48,28 @@ package studio.aroundhub.codeground.lecture.chatgpt;
 public class Practice05Set {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+
+        Set<Integer> setA = new HashSet<>();
+        for(int i=0;i<n;i++) {
+            setA.add(sc.nextInt());
+        }
+
+        Set<Integer> setB = new HashSet<>();
+        for(int i=0;i<m;i++) {
+            setB.add(sc.nextInt());
+        }
+
+        int count = 0;
+        for(int i : setA) {
+            if (setB.contains(i)) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
 
     }
 }

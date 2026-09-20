@@ -1,5 +1,8 @@
 package studio.aroundhub.codeground.lecture.chatgpt;
 
+import java.util.LinkedList;
+import java.util.Scanner;
+
 /*
 문제 2 — 안내 데스크 대기 줄 (큐)
 
@@ -55,6 +58,28 @@ CALL
 public class Practice02Queue {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int total =  sc.nextInt();
+        LinkedList<Integer> list = new LinkedList<>();
+
+        for(int i = 1; i <= total; i++) {
+           String input = sc.next();
+
+           if(input.equalsIgnoreCase("JOIN")) {
+               int num = sc.nextInt();
+               list.add(num);
+           }else if(input.equalsIgnoreCase("CALL")) {
+               if(list.isEmpty()) {
+                   System.out.println("-1");
+                   continue;
+               }
+               int out = list.pop();
+               System.out.println(out);
+           }else {
+               System.out.println(list.size());
+           }
+        }
 
     }
 }

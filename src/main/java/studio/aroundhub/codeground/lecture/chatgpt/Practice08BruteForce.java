@@ -1,5 +1,7 @@
 package studio.aroundhub.codeground.lecture.chatgpt;
 
+import java.util.Scanner;
+
 /*
 문제 8 — 예산 안에서 간식 세 개 고르기 (브루트포스)
 
@@ -44,7 +46,36 @@ package studio.aroundhub.codeground.lecture.chatgpt;
 public class Practice08BruteForce {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int b = sc.nextInt();
 
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        int maxSum = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int k = 0; k < n; k++) {
+                    if (i!=j && j!=k && k!=i) {
+                        int tempSum = arr[i] + arr[j] + arr[k];
+                        if (tempSum <= b) {
+                            if(maxSum<tempSum){
+                                maxSum = tempSum;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if(maxSum == 0) {
+            System.out.println("-1");
+        } else {
+            System.out.println(maxSum);
+        }
     }
 }
 
